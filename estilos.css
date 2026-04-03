@@ -268,8 +268,3 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
-
-/* Espacio final para que no corte el scroll */
-body {
-    padding-bottom: 50px;
-}
