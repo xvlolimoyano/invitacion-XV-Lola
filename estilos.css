@@ -6,118 +6,98 @@
 
 body {
     width: 100%;
-    background-color: #d1cfc7;
-    overflow-x: hidden;
-    font-family: sans-serif;
+    background-color: #d1cfc7; 
+    overflow-x: hidden; 
 }
 
-/* --- ESTRUCTURA FLUÍDA --- */
-.seccion-bloque {
+/* ESTO ES LO QUE HACE QUE TUS PÍXELES FUNCIONEN EN GITHUB */
+.contenedor-principal {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: relative;
+    height: 4000px; /* Ajustamos el largo total para que entren tus coordenadas */
 }
 
-.img-fluida {
+/* PORTADA */
+.seccion-portada { width: 100%; display: flex; flex-direction: column; align-items: center; }
+.titulo-container { width: 100%; position: relative; z-index: 10; }
+.titulo-img { width: 100%; height: auto; display: block; }
+.sticker-container { width: 100%; position: relative; z-index: 10; margin-top: -130px; }
+.sticker-img { width: 100%; height: auto; filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.3)); }
+
+.fondo1-img {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.contenedor-relativo {
-    width: 100%;
-    position: relative;
-}
-
-/* --- EFECTOS SCRAPBOOK (PISADO DE IMÁGENES) --- */
-.sticker-overlap {
-    width: 100%;
-    margin-top: -35%; /* Hace que el sticker suba sobre el título */
-    z-index: 10;
-}
-
-.img-fondo-overlap {
-    width: 100%;
-    margin-top: -60%; /* Hace que el papel rasgado suba */
+    position: absolute;
+    top: 300px; /* Ajustado para que se vea detras del titulo */
     z-index: 1;
 }
 
-.img-fondo-atras {
+/* FECHA - TUS VALORES ORIGINALES */
+.fecha-container {
+    position: absolute;
+    top: 870px; 
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: -1;
-    transform: translateY(-50%);
-}
-
-/* --- BOTONES INVISIBLES (Usando % para que no se muevan) --- */
-.boton-invisible-mapa {
-    position: absolute;
-    bottom: 35%;
-    left: 25%;
-    width: 50%;
-    height: 15%;
-    background: rgba(0,0,0,0);
-}
-
-.boton-invisible-playlist {
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
-    width: 30%;
-    height: 10%;
-    background: rgba(0,0,0,0);
-}
-
-.boton-invisible-regalo {
-    position: absolute;
-    bottom: 25%;
-    left: 30%;
-    width: 40%;
-    height: 10%;
-    background: rgba(0,0,0,0);
-}
-
-.boton-invisible-asistencia {
-    position: absolute;
-    bottom: 15%;
-    left: 20%;
-    width: 60%;
-    height: 10%;
-    background: rgba(0,0,0,0);
-}
-
-/* --- POPUP --- */
-.overlay-popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    z-index: 1000;
+    z-index: 15;
+    display: flex;
     justify-content: center;
-    align-items: center;
 }
+.fecha-img { width: 100%; height: auto; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
+.boton-invisible-mapa { position: absolute; bottom: 40%; left: 38%; width: 35%; height: 40px; cursor: pointer; z-index: 20; }
 
-.popup-contenido {
-    width: 90%;
-    max-width: 400px;
+/* DRESSCODE - TUS VALORES ORIGINALES */
+.dresscode-container {
+    position: absolute;
+    top: 1500px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 15;
 }
+.dresscode-img { width: 100%; height: auto; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
 
-.boton-cerrar {
-    margin-top: 20px;
-    padding: 10px 30px;
-    border-radius: 20px;
-    border: none;
-    background: white;
-    font-weight: bold;
-    cursor: pointer;
+/* PLAYLIST - TUS VALORES ORIGINALES */
+.playlist-container {
+    position: absolute;
+    top: 2020px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 15;
 }
+.playlist-img { width: 95%; height: auto; margin: 0 auto; display: block; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
+.fondo2-img { width: 100%; height: auto; position: absolute; top: 1900px; z-index: -1; }
+.boton-invisible-playlist { position: absolute; top: 2450px; left: 63%; transform: translateX(-50%); width: 23%; height: 42px; cursor: pointer; z-index: 20; }
 
-/* Margen final */
-body { padding-bottom: 50px; }
+/* REGALO - TUS VALORES ORIGINALES */
+.regalo-container {
+    position: absolute;
+    top: 2570px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;  
+    z-index: 15;
+}
+.regalo-img { width: 100%; height: auto; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
+.boton-invisible-regalo { position: absolute; bottom: 27%; left: 50%; transform: translateX(-50%); width: 35%; height: 50px; cursor: pointer; z-index: 100; }
+
+/* ASISTENCIA - TUS VALORES ORIGINALES */
+.asistencia-container {
+    position: absolute;
+    top: 3200px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;  
+    z-index: 15;
+}
+.asistencia-img { width: 100%; height: auto; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
+.fondo3-img { width: 100%; height: auto; position: absolute; top: 3100px; z-index: -2; }
+.boton-invisible-asistencia { position: absolute; top: 3650px; left: 50%; transform: translateX(-50%); width: 55%; height: 33px; cursor: pointer; z-index: 20; }
+
+/* POPUP */
+.overlay-popup { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.7); z-index: 1000; justify-content: center; align-items: center; }
+.popup-contenido { width: 95%; max-width: 400px; position: relative; text-align: center; }
+.datos-img { width: 100%; height: auto; }
+.boton-cerrar { margin-top: 15px; padding: 10px 20px; background-color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; }
