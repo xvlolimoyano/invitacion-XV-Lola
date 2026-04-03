@@ -80,6 +80,7 @@ section {
     width: 35%;
     height: 40px;
     z-index: 20;
+    background-color: rgba(255, 0, 0, 0.5);
 }
 
 /* ================= DRESSCODE ================= */
@@ -130,6 +131,7 @@ section {
     width: 23%;
     height: 42px;
     z-index: 20;
+    background-color: rgba(255, 0, 0, 0.5);
 }
 
 /* ================= REGALO ================= */
@@ -145,7 +147,7 @@ section {
 .regalo-img {
     width: 100%;
     position: relative;
-    top: 200px;
+    top: 185px;
 }
 
 .boton-invisible-regalo {
@@ -156,6 +158,7 @@ section {
     width: 35%;
     height: 50px;
     z-index: 20;
+    background-color: rgba(255, 0, 0, 0.5);
 }
 
 /* ================= ASISTENCIA ================= */
@@ -191,6 +194,7 @@ section {
     width: 55%;
     height: 33px;
     z-index: 20;
+    background-color: rgba(255, 0, 0, 0.5);
 }
 
 /* ================= POPUP ================= */
