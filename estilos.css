@@ -222,8 +222,8 @@ section {
 .fondo3-img {
     width: 100%;
     display: block;
-    margin-top: -200%;
-    z-index: -10;
+    margin-top: -170%;
+    z-index: -15;
 }
 
 .boton-invisible-asistencia {
