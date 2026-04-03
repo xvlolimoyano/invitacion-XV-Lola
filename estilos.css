@@ -193,7 +193,7 @@ section {
 
 .boton-invisible-asistencia {
     position: absolute;
-    bottom: 30%;
+    bottom: -20%;
     left: 50%;
     transform: translateX(-50%);
     width: 55%;
