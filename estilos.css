@@ -91,7 +91,7 @@ section {
 .dresscode-img {
     width: 100%;
     position: relative;
-    top: 40px;
+    top: 20px;
 }
 
 /* ================= PLAYLIST ================= */
@@ -109,7 +109,7 @@ section {
     margin: auto;
     display: block;
     position: relative;
-    top: 110px;
+    top: 100px;
 }
 
 /* FONDO 2 */
@@ -177,7 +177,7 @@ section {
 /* FONDO 3 */
 .fondo3-img {
     position: absolute;
-    top: -30%;
+    top: -60%;
     left: 0;
     width: 100%;
     z-index: 1;
