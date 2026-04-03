@@ -1,64 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <title>LOLA XV</title>
-  <link rel="stylesheet" href="estilos.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>LOLA XV</title>
+    <link rel="stylesheet" href="estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
-
 <body>
+
     <audio id="musica-invitacion" loop preload="auto">
         <source src="img/cancion.mp3" type="audio/mpeg">
     </audio>
 
-    <div class="invitacion-completa">
-
-        <div class="titulo-container">
-            <img src="img/Titulo.png" alt="" class="titulo-img">
+    <section class="seccion-bloque">
+        <img src="img/Titulo.png" alt="" class="img-fluida">
+        <div class="sticker-overlap">
+            <img src="img/Sticker.png" alt="Lola" class="img-fluida">
         </div>
-        <div class="sticker-container">
-            <img src="img/Sticker.png" alt="Foto de Lola" class="sticker-img">
-        </div>
-        <img src="img/Fondo1.png" class="fondo1-img">
+        <img src="img/Fondo1.png" class="img-fondo-overlap">
+    </section>
 
-        <div class="fecha-container">
-            <img src="img/Fecha.png" alt="Fecha de la fiesta" class="fecha-img">       
-            <a href="YOUR_MAPS_LINK" target="_blank" class="boton-invisible-mapa"></a>
+    <section class="seccion-bloque">
+        <div class="contenedor-relativo">
+            <img src="img/Fecha.png" alt="Fecha" class="img-fluida">
+            <a href="https://maps.app.goo.gl/WFgepkTgUbSPKK1b9" target="_blank" class="boton-invisible-mapa"></a>
         </div>
+    </section>
 
-        <div class="dresscode-container">
-            <img src="img/Dresscode.png" alt="Dresscode" class="dresscode-img">
+    <section class="seccion-bloque">
+        <img src="img/Dresscode.png" alt="Dresscode" class="img-fluida">
+    </section>
+
+    <section class="seccion-bloque">
+        <div class="contenedor-relativo">
+            <img src="img/Playlist.png" alt="Playlist" class="img-fluida">
+            <img src="img/Fondo2.png" class="img-fondo-atras">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSce8M2eFJ6FT9Tx8-pnpg6rSIUcFiIPSnBj1gZweGKZmo0Mhg/viewform" target="_blank" class="boton-invisible-playlist"></a>
         </div>
+    </section>
 
-        <div class="playlist-container">
-            <img src="img/Playlist.png" alt="Playlist" class="playlist-img">
-        </div>
-        <img src="img/Fondo2.png" class="fondo2-img">
-        <a href="YOUR_PLAYLIST_LINK" target="_blank" class="boton-invisible-playlist"></a>
-
-        <div class="regalo-container">
-            <img src="img/Regalo.png" alt="Regalo" class="regalo-img">
+    <section class="seccion-bloque">
+        <div class="contenedor-relativo">
+            <img src="img/Regalo.png" alt="Regalo" class="img-fluida">
             <div class="boton-invisible-regalo" onclick="abrirPopup()"></div>
         </div>
+    </section>
 
-        <div class="asistencia-container">
-            <img src="img/Asistencia.png" alt="Asistencia" class="asistencia-img">
+    <section class="seccion-bloque">
+        <div class="contenedor-relativo">
+            <img src="img/Asistencia.png" alt="Asistencia" class="img-fluida">
+            <img src="img/Fondo3.png" class="img-fondo-atras">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxhUPQpqhzF-P1NTeE7UlwA2ywFsTPpvuPsSic4cweiukX0w/viewform" target="_blank" class="boton-invisible-asistencia"></a>
         </div>
-        <img src="img/Fondo3.png" class="fondo3-img">
-        <a href="YOUR_ASISTENCIA_LINK" target="_blank" class="boton-invisible-asistencia"></a>
+    </section>
 
-    </div> <div id="popup-regalo" class="overlay-popup" onclick="cerrarPopup()">
-        <div class="popup-contenido">
-            <img src="img/Datos.png" alt="Datos de transferencia" class="datos-img">
+    <div id="popup-regalo" class="overlay-popup" onclick="cerrarPopup()">
+        <div class="popup-contenido" onclick="event.stopPropagation()">
+            <img src="img/Datos.png" alt="Datos" class="img-fluida">
             <button class="boton-cerrar" onclick="cerrarPopup()">CERRAR</button>
         </div>
     </div>
 
     <script>
-        // ... (Tu código de JS de música y popup igual que antes) ...
+        function abrirPopup() {
+            document.getElementById("popup-regalo").style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+        function cerrarPopup() {
+            document.getElementById("popup-regalo").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+        function iniciarMusica() {
+            var audio = document.getElementById("musica-invitacion");
+            audio.play().catch(function(e){ console.log("Esperando clic"); });
+        }
+        window.addEventListener('click', iniciarMusica, { once: true });
+        window.addEventListener('touchstart', iniciarMusica, { once: true });
     </script>
 </body>
-
 </html>
