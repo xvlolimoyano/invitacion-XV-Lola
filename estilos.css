@@ -109,7 +109,7 @@ section {
     margin: auto;
     display: block;
     position: relative;
-    top: 100px;
+    top: 90px;
 }
 
 /* FONDO 2 */
@@ -177,7 +177,7 @@ section {
 /* FONDO 3 */
 .fondo3-img {
     position: absolute;
-    top: -60%;
+    top: -90%;
     left: 0;
     width: 100%;
     z-index: 1;
