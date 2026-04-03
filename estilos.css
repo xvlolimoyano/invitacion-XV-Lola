@@ -10,11 +10,14 @@ body {
     overflow-x: hidden; 
 }
 
+/* --- SECCIÓN PORTADA --- */
 .seccion-portada {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    min-height: 850px; /* Le damos altura para que la fecha no se le suba encima */
 }
 
 .titulo-container {
@@ -46,14 +49,21 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    position: relative;
+    position: absolute; /* Cambiado a absolute para que el fondo no empuje el resto */
+    bottom: 0;
     z-index: 1;
-    margin-top: -700px;
+}
+
+/* --- SECCIÓN FECHA --- */
+.seccion-fecha {
+    width: 100%;
+    position: relative;
+    min-height: 550px;
 }
 
 .fecha-container {
     position: absolute;
-    top: 870px;
+    top: 50px; /* Ajustado: ahora se mide desde el inicio de SU sección */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -79,16 +89,16 @@ body {
     z-index: 20;
 }
 
+/* --- SECCIÓN DRESSCODE --- */
 .seccion-dresscode {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    min-height: 600px;
 }
 
 .dresscode-container {
     position: absolute;
-    top: 1500px;
+    top: 0px; /* Ajustado */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -101,25 +111,25 @@ body {
     filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
 }
 
+/* --- SECCIÓN PLAYLIST --- */
+.seccion-playlist {
+    width: 100%;
+    position: relative;
+    min-height: 600px;
+}
+
 .fondo2-img {
     width: 100%;
     height: auto;
     display: block;
-    position: relative;
+    position: absolute;
+    top: -100px;
     z-index: -1;
-    margin-top: -320px;
-}
-
-.seccion-playlist {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .playlist-container {
     position: absolute;
-    top: 2020px;
+    top: 50px; /* Ajustado */
     left: 50%; 
     transform: translateX(-50%);
     width: 100%;
@@ -136,7 +146,7 @@ body {
 
 .boton-invisible-playlist {
     position: absolute;
-    bottom: -151.5%;
+    bottom: 5%; /* Ajustado para que no dependa de números negativos gigantes */
     left: 63%;
     transform: translateX(-50%);
     width: 23%;
@@ -146,17 +156,16 @@ body {
     z-index: 20;
 }
 
+/* --- SECCIÓN REGALO --- */
 .seccion-regalo {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: relative;
+    min-height: 450px;
 }
 
 .regalo-container {
     position: absolute;
-    top: -50px;
+    top: 20px; /* Ajustado */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;  
@@ -169,10 +178,67 @@ body {
     filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
 }
 
+.boton-invisible-regalo {
+    position: absolute;
+    bottom: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* --- SECCIÓN ASISTENCIA --- */
+.seccion-asistencia {
+    width: 100%;
+    position: relative;
+    min-height: 600px;
+}
+
+.asistencia-container {
+    position: absolute;
+    top: 50px; /* Ajustado de 350px a 50px */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;  
+    z-index: 15;
+}
+
+.asistencia-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
+}
+
+.fondo3-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: -50px;
+    z-index: -2;
+}
+
+.boton-invisible-asistencia {
+    position: absolute;
+    bottom: 17.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    height: 33px;
+    background-color: rgba(255, 0, 0, 0);
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* --- POPUP --- */
 .overlay-popup {
     display: none;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
@@ -203,58 +269,7 @@ body {
     cursor: pointer;
 }
 
-.boton-invisible-regalo {
-    position: absolute;
-    bottom: 27%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 35%;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0);
-    cursor: pointer;
-    z-index: 100;
-}
-
-.seccion-asistencia {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.asistencia-container {
-    position: absolute;
-    top: 350px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;  
-    z-index: 15;
-}
-
-.asistencia-img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
-}
-
-.fondo3-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: relative;
-    z-index: -2;
-    margin-top: -320px;
-}
-
-.boton-invisible-asistencia {
-    position: absolute;
-    bottom: 17.5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 55%;
-    height: 33px;
-    background-color: rgba(255, 0, 0, 0);
-    cursor: pointer;
-    z-index: 20;
+/* Espacio final para que no corte el scroll */
+body {
+    padding-bottom: 50px;
 }
