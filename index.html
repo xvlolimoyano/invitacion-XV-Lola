@@ -9,97 +9,56 @@
 </head>
 
 <body>
+    <audio id="musica-invitacion" loop preload="auto">
+        <source src="img/cancion.mp3" type="audio/mpeg">
+    </audio>
 
-    <audio id="musica-invitacion" loop preload="auto" playsinline>
-    <source src="img/cancion.mp3" type="audio/mpeg">
-</audio>
+    <div class="invitacion-completa">
 
-    <section class="seccion-portada">
         <div class="titulo-container">
-        <img src="img/Titulo.png" alt="" class="titulo-img">
+            <img src="img/Titulo.png" alt="" class="titulo-img">
         </div>
         <div class="sticker-container">
             <img src="img/Sticker.png" alt="Foto de Lola" class="sticker-img">
         </div>
         <img src="img/Fondo1.png" class="fondo1-img">
 
-    </section>
+        <div class="fecha-container">
+            <img src="img/Fecha.png" alt="Fecha de la fiesta" class="fecha-img">       
+            <a href="YOUR_MAPS_LINK" target="_blank" class="boton-invisible-mapa"></a>
+        </div>
 
-    <section class="seccion-fecha">
-    <div class="fecha-container">
-        <img src="img/Fecha.png" alt="Fecha de la fiesta" class="fecha-img">       
-        <a href="https://maps.app.goo.gl/WFgepkTgUbSPKK1b9" target="_blank" class="boton-invisible-mapa"></a>
-    </div>
-    </section>
-
-    <section class="seccion-dresscode">
         <div class="dresscode-container">
             <img src="img/Dresscode.png" alt="Dresscode" class="dresscode-img">
         </div>
-    </section>
 
-    <section class="seccion-playlist">
         <div class="playlist-container">
             <img src="img/Playlist.png" alt="Playlist" class="playlist-img">
         </div>
         <img src="img/Fondo2.png" class="fondo2-img">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSce8M2eFJ6FT9Tx8-pnpg6rSIUcFiIPSnBj1gZweGKZmo0Mhg/viewform?usp=publish-editor" target="_blank" class="boton-invisible-playlist"></a>
-    </section>
+        <a href="YOUR_PLAYLIST_LINK" target="_blank" class="boton-invisible-playlist"></a>
 
-    <section class="seccion-regalo">
-    <div class="regalo-container">
-        <img src="img/Regalo.png" alt="Regalo" class="regalo-img">
-        <div class="boton-invisible-regalo" onclick="abrirPopup()"></div>
-    </div>
-    </section>
+        <div class="regalo-container">
+            <img src="img/Regalo.png" alt="Regalo" class="regalo-img">
+            <div class="boton-invisible-regalo" onclick="abrirPopup()"></div>
+        </div>
 
-    <section class="seccion-asistencia">
         <div class="asistencia-container">
             <img src="img/Asistencia.png" alt="Asistencia" class="asistencia-img">
         </div>
         <img src="img/Fondo3.png" class="fondo3-img">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxhUPQpqhzF-P1NTeE7UlwA2ywFsTPpvuPsSic4cweiukX0w/viewform?usp=dialog" target="_blank" class="boton-invisible-asistencia"></a>
-    </section>
+        <a href="YOUR_ASISTENCIA_LINK" target="_blank" class="boton-invisible-asistencia"></a>
 
-    <div id="popup-regalo" class="overlay-popup" onclick="cerrarPopup()">
-    <div class="popup-contenido">
-        <img src="img/Datos.png" alt="Datos de transferencia" class="datos-img">
-        <button class="boton-cerrar" onclick="cerrarPopup()">CERRAR</button>
+    </div> <div id="popup-regalo" class="overlay-popup" onclick="cerrarPopup()">
+        <div class="popup-contenido">
+            <img src="img/Datos.png" alt="Datos de transferencia" class="datos-img">
+            <button class="boton-cerrar" onclick="cerrarPopup()">CERRAR</button>
+        </div>
     </div>
-    </div>
 
-<script>
-    function abrirPopup() {
-        document.getElementById("popup-regalo").style.display = "flex";
-        document.body.style.overflow = "hidden";
-    }
-    function cerrarPopup() {
-        document.getElementById("popup-regalo").style.display = "none";
-        document.body.style.overflow = "auto";
-    }
-
-    const audio = document.getElementById("musica-invitacion");
-
-    function activarAudio() {
-        audio.play().then(() => {
-            console.log("Música iniciada correctamente");
-            removerEscuchadores();
-        }).catch(error => {
-            console.log("El navegador aún bloquea el audio");
-        });
-    }
-
-    function removerEscuchadores() {
-        window.removeEventListener('click', activarAudio);
-        window.removeEventListener('touchstart', activarAudio);
-        window.removeEventListener('scroll', activarAudio);
-    }
-
-    window.addEventListener('click', activarAudio);
-    window.addEventListener('touchstart', activarAudio);
-    window.addEventListener('scroll', activarAudio);
-    window.onload = activarAudio;
-</script>
+    <script>
+        // ... (Tu código de JS de música y popup igual que antes) ...
+    </script>
 </body>
 
 </html>
