@@ -58,7 +58,7 @@ body {
 .seccion-fecha {
     width: 100%;
     position: relative;
-    min-height: 550px;
+    min-height: 50px;
 }
 
 .fecha-container {
