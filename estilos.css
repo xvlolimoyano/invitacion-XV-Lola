@@ -51,7 +51,7 @@ section {
 }
 
 .sticker-img {
-    width: 80%;
+    width: 100%;
     display: block;
     filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.3));
 }
@@ -103,7 +103,7 @@ section {
 /* ================= PLAYLIST ================= */
 
 .seccion-playlist {
-    margin-top: 10%;
+    margin-top: -5%; /* 👈 sube la sección para evitar espacio blanco */
 }
 
 .playlist-container {
@@ -122,7 +122,7 @@ section {
 .fondo2-img {
     width: 100%;
     display: block;
-    margin-top: -40%;
+    margin-top: -20%; /* 👈 solape con fondo1 */
     z-index: -1;
 }
 
