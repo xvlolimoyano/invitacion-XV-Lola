@@ -1,155 +1,270 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-    width: 100%;
-    background-color: #d1cfc7;
-    overflow-x: hidden;
-    /* Esto quita cualquier zoom automático del celular */
-    touch-action: manipulation;
+body{
+width:100%;
+background-color:#d1cfc7;
+overflow-x:hidden;
 }
 
-/* --- BLOQUES DE SECCIÓN --- */
-/* Cada sección ahora es un bloque que empuja al siguiente hacia abajo */
-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+/* SECCIONES */
+
+section{
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+position:relative;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    display: block;
+/* IMAGENES GENERALES */
+
+img{
+width:100%;
+height:auto;
+display:block;
 }
 
-/* --- PORTADA Y STICKER --- */
-.seccion-portada {
-    z-index: 10;
+/* PORTADA */
+
+.seccion-portada{
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
-.sticker-container {
-    width: 100%;
-    margin-top: -35%; /* Esto hace que el sticker pise el título proporcionalmente */
-    position: relative;
-    z-index: 11;
+.titulo-container{
+width:100%;
+position:relative;
+z-index:10;
 }
 
-.fondo1-img {
-    margin-top: -55%; /* El papel rasgado pisa lo de arriba */
-    z-index: 1;
+.titulo-img{
+width:100%;
+height:auto;
+display:block;
+filter:drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
 }
 
-/* --- FECHA --- */
-.seccion-fecha {
-    margin-top: 5%; /* Espacio entre el papel rasgado y la fecha */
+.sticker-container{
+width:100%;
+position:relative;
+z-index:10;
+margin-top:-20vw;
 }
 
-.fecha-container {
-    width: 100%;
-    position: relative;
+.sticker-img{
+width:100%;
+height:auto;
+filter:drop-shadow(4px 4px 8px rgba(0,0,0,0.3));
 }
 
-.boton-invisible-mapa {
-    position: absolute;
-    top: 45%;
-    left: 35%;
-    width: 35%;
-    height: 15%;
-    background: transparent;
-    z-index: 20;
+.fondo1-img{
+width:100%;
+height:auto;
+display:block;
+margin-top:-20vw;
+z-index:1;
 }
 
-/* --- DRESSCODE --- */
-.seccion-dresscode {
-    margin-top: 10%; /* Ajustá este % para separar el Dresscode de la Fecha */
+/* FECHA */
+
+.seccion-fecha{
+width:100%;
+display:flex;
+justify-content:center;
 }
 
-/* --- PLAYLIST --- */
-.seccion-playlist {
-    margin-top: 10%;
+.fecha-container{
+position:relative;
+width:100%;
 }
 
-.playlist-container {
-    width: 100%;
-    position: relative;
-    z-index: 5;
+.fecha-img{
+width:100%;
+height:auto;
+filter:drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
 }
 
-.fondo2-img {
-    position: absolute;
-    top: -20%;
-    z-index: -1;
+.boton-invisible-mapa{
+position:absolute;
+bottom:38%;
+left:50%;
+transform:translateX(-50%);
+width:40%;
+height:40px;
+cursor:pointer;
+z-index:20;
 }
 
-.boton-invisible-playlist {
-    position: absolute;
-    bottom: 10%;
-    left: 60%;
-    width: 25%;
-    height: 10%;
-    background: transparent;
-    z-index: 10;
+/* DRESSCODE */
+
+.seccion-dresscode{
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
-/* --- REGALO --- */
-.seccion-regalo {
-    margin-top: 15%;
+.dresscode-container{
+width:100%;
+position:relative;
 }
 
-.regalo-container {
-    width: 100%;
-    position: relative;
+.dresscode-img{
+width:100%;
+height:auto;
+filter:drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
 }
 
-.boton-invisible-regalo {
-    position: absolute;
-    bottom: 25%;
-    left: 30%;
-    width: 40%;
-    height: 15%;
-    background: transparent;
-    z-index: 10;
+/* PLAYLIST */
+
+.seccion-playlist{
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
-/* --- ASISTENCIA --- */
-.seccion-asistencia {
-    margin-top: 10%;
+.playlist-container{
+position:relative;
+width:100%;
 }
 
-.fondo3-img {
-    position: absolute;
-    top: -10%;
-    z-index: -1;
+.playlist-img{
+width:95%;
+margin:auto;
+display:block;
+filter:drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
 }
 
-.boton-invisible-asistencia {
-    position: absolute;
-    bottom: 15%;
-    left: 25%;
-    width: 50%;
-    height: 10%;
-    background: transparent;
+.fondo2-img{
+width:100%;
+height:auto;
+display:block;
+margin-top:-20vw;
+z-index:-1;
 }
 
-/* --- POPUP --- */
-.overlay-popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
+.boton-invisible-playlist{
+position:absolute;
+bottom:12%;
+left:65%;
+transform:translateX(-50%);
+width:28%;
+height:42px;
+cursor:pointer;
+z-index:20;
 }
 
-.popup-contenido { width: 90%; max-width: 400px; text-align: center; }
-.boton-cerrar { margin-top: 15px; padding: 10px 20px; border-radius: 20px; border: none; font-weight: bold; }
+/* REGALO */
+
+.seccion-regalo{
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.regalo-container{
+position:relative;
+width:100%;
+}
+
+.regalo-img{
+width:100%;
+height:auto;
+filter:drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
+}
+
+.boton-invisible-regalo{
+position:absolute;
+bottom:27%;
+left:50%;
+transform:translateX(-50%);
+width:40%;
+height:50px;
+cursor:pointer;
+z-index:100;
+}
+
+/* POPUP */
+
+.overlay-popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100vw;
+height:100vh;
+background-color:rgba(0,0,0,0.7);
+z-index:1000;
+justify-content:center;
+align-items:center;
+}
+
+.popup-contenido{
+width:95%;
+position:relative;
+text-align:center;
+}
+
+.datos-img{
+width:100%;
+height:auto;
+}
+
+.boton-cerrar{
+margin-top:15px;
+padding:10px 20px;
+background-color:white;
+border:none;
+border-radius:20px;
+font-family:sans-serif;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* ASISTENCIA */
+
+.seccion-asistencia{
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+position:relative;
+}
+
+.asistencia-container{
+position:relative;
+width:100%;
+}
+
+.asistencia-img{
+width:100%;
+height:auto;
+filter:drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
+}
+
+.fondo3-img{
+width:100%;
+height:auto;
+display:block;
+margin-top:-20vw;
+z-index:-2;
+}
+
+.boton-invisible-asistencia{
+position:absolute;
+bottom:18%;
+left:50%;
+transform:translateX(-50%);
+width:60%;
+height:35px;
+cursor:pointer;
+z-index:20;
+}
