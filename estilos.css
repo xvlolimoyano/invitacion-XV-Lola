@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: #d1cfc7; 
+    overflow-x: hidden; 
+}
+
+.seccion-portada {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-container {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.titulo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sticker-container {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    margin-top: -130px;
+}
+
+.sticker-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.3));
+}
+
+.fondo1-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-top: -700px;
+}
+
+.fecha-container {
+    position: absolute;
+    top: 870px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+}
+
+.fecha-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
+}
+
+.boton-invisible-mapa {
+    position: absolute;
+    bottom: 40%;
+    left: 38%;
+    width: 35%;
+    height: 40px;
+    background-color: rgba(255, 0, 0, 0);
+    cursor: pointer;
+    z-index: 20;
+}
+
+.seccion-dresscode {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dresscode-container {
+    position: absolute;
+    top: 1500px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 15;
+}
+
+.dresscode-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
+}
+
+.fondo2-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: -1;
+    margin-top: -320px;
+}
+
+.seccion-playlist {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playlist-container {
+    position: absolute;
+    top: 2020px;
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 15;
+}
+
+.playlist-img {
+    width: 95%;
+    height: auto;
+    margin: 0 auto; 
+    display: block;
+    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
+}
+
+.boton-invisible-playlist {
+    position: absolute;
+    bottom: -151.5%;
+    left: 63%;
+    transform: translateX(-50%);
+    width: 23%;
+    height: 42px;
+    background-color: rgba(255, 0, 0, 0);
+    cursor: pointer;
+    z-index: 20;
+}
+
+.seccion-regalo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.regalo-container {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;  
+    z-index: 15;
+}
+
+.regalo-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
+}
+
+.overlay-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-contenido {
+    width: 95%;
+    position: relative;
+    text-align: center;
+}
+
+.datos-img {
+    width: 100%;
+    height: auto;
+}
+
+.boton-cerrar {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-invisible-regalo {
+    position: absolute;
+    bottom: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.seccion-asistencia {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.asistencia-container {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;  
+    z-index: 15;
+}
+
+.asistencia-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
+}
+
+.fondo3-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: -2;
+    margin-top: -320px;
+}
+
+.boton-invisible-asistencia {
+    position: absolute;
+    bottom: 17.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    height: 33px;
+    background-color: rgba(255, 0, 0, 0);
+    cursor: pointer;
+    z-index: 20;
+}
