@@ -92,7 +92,7 @@ section {
 .dresscode-img {
     width: 100%;
     position: relative;
-    top: 20px;
+    top: 1px;
 }
 
 /* ================= PLAYLIST ================= */
@@ -152,7 +152,7 @@ section {
 
 .boton-invisible-regalo {
     position: absolute;
-    bottom: -20%;
+    bottom: -30%;
     left: 50%;
     transform: translateX(-50%);
     width: 35%;
@@ -174,7 +174,7 @@ section {
 .asistencia-img {
     width: 100%;
     position: relative;
-    top: 300px;
+    top: 200px;
 }
 
 /* FONDO 3 */
