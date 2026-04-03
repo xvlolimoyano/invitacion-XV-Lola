@@ -8,6 +8,7 @@ body {
     width: 100%;
     background-color: #7D567F;
     overflow-x: hidden;
+    position: relative;
 }
 
 /* SECCIONES */
@@ -20,7 +21,6 @@ section {
 
 .seccion-portada {
     position: relative;
-    width: 100%;
 }
 
 /* FONDO 1 */
@@ -29,15 +29,22 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 1;
 }
 
-/* TITULO */
-.titulo-container {
+/* CONTENIDO ARRIBA */
+.titulo-img,
+.sticker-img,
+.fecha-img,
+.dresscode-img,
+.playlist-img,
+.regalo-img,
+.asistencia-img {
     position: relative;
     z-index: 10;
 }
 
+/* TITULO */
 .titulo-img {
     width: 100%;
     display: block;
@@ -45,34 +52,25 @@ section {
 
 /* STICKER */
 .sticker-container {
-    position: relative;
-    z-index: 10;
     margin-top: -25%;
 }
 
 .sticker-img {
     width: 80%;
     display: block;
+    margin: auto;
     filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.3));
 }
 
 /* ================= FECHA ================= */
 
 .seccion-fecha {
-    margin-top: -25%;
-}
-
-.fecha-container {
-    position: relative;
-    width: 100%;
+    margin-top: -10%;
 }
 
 .fecha-img {
     width: 100%;
     display: block;
-    position: relative;
-    z-index: 10;
-    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
 }
 
 .boton-invisible-mapa {
@@ -81,33 +79,23 @@ section {
     left: 38%;
     width: 35%;
     height: 40px;
-    background: transparent;
-    cursor: pointer;
     z-index: 20;
 }
 
 /* ================= DRESSCODE ================= */
 
 .seccion-dresscode {
-    margin-top: 25%;
-}
-
-.dresscode-container {
-    width: 100%;
+    margin-top: 10%;
 }
 
 .dresscode-img {
     width: 100%;
-    display: block;
-    position: relative;
-    z-index: 10;
-    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
 }
 
 /* ================= PLAYLIST ================= */
 
 .seccion-playlist {
-    margin-top: 60%; /* 👈 sube la sección para evitar espacio blanco */
+    margin-top: 10%;
 }
 
 .playlist-container {
@@ -118,20 +106,18 @@ section {
     width: 95%;
     margin: auto;
     display: block;
-    position: relative;
-    z-index: 10;
-    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
 }
 
 /* FONDO 2 */
 .fondo2-img {
     position: absolute;
-    top: -65%; /* 👈 ajustá esto fino */
+    top: -30%;
     left: 0;
     width: 100%;
-    z-index: 3;
+    z-index: 2;
 }
 
+/* BOTON */
 .boton-invisible-playlist {
     position: absolute;
     bottom: 12%;
@@ -139,28 +125,21 @@ section {
     transform: translateX(-50%);
     width: 23%;
     height: 42px;
-    background: transparent;
-    cursor: pointer;
     z-index: 20;
 }
 
 /* ================= REGALO ================= */
 
 .seccion-regalo {
-    margin-top: 100%;
+    margin-top: 15%;
 }
 
 .regalo-container {
     position: relative;
-    width: 100%;
 }
 
 .regalo-img {
     width: 100%;
-    display: block;
-    position: relative;
-    z-index: 10;
-    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
 }
 
 .boton-invisible-regalo {
@@ -170,9 +149,40 @@ section {
     transform: translateX(-50%);
     width: 35%;
     height: 50px;
-    background: transparent;
-    cursor: pointer;
-    z-index: 100;
+    z-index: 20;
+}
+
+/* ================= ASISTENCIA ================= */
+
+.seccion-asistencia {
+    margin-top: 15%;
+}
+
+.asistencia-container {
+    position: relative;
+}
+
+.asistencia-img {
+    width: 100%;
+}
+
+/* FONDO 3 */
+.fondo3-img {
+    position: absolute;
+    top: -30%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.boton-invisible-asistencia {
+    position: absolute;
+    bottom: 17.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    height: 33px;
+    z-index: 20;
 }
 
 /* ================= POPUP ================= */
@@ -196,54 +206,12 @@ section {
 
 .datos-img {
     width: 100%;
-    display: block;
 }
 
 .boton-cerrar {
     margin-top: 15px;
     padding: 10px 20px;
     background: white;
-    border: none;
     border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* ================= ASISTENCIA ================= */
-
-.seccion-asistencia {
-    margin-top: 150%;
-}
-
-.asistencia-container {
-    position: relative;
-    width: 100%;
-}
-
-.asistencia-img {
-    width: 100%;
-    display: block;
-    position: relative;
-    z-index: 10;
-    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
-}
-
-/* FONDO 3 */
-.fondo3-img {
-    width: 100%;
-    display: block;
-    margin-top: -170%;
-    z-index: 1;
-}
-
-.boton-invisible-asistencia {
-    position: absolute;
-    bottom: 17.5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 55%;
-    height: 33px;
-    background: transparent;
-    cursor: pointer;
-    z-index: 20;
+    border: none;
 }
