@@ -29,7 +29,7 @@ body {
     height: auto;
     display: block;
     position: absolute;
-    top: 300px; /* Ajustado para que se vea detras del titulo */
+    top: 0px; /* Ajustado para que se vea detras del titulo */
     z-index: 1;
 }
 
