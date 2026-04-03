@@ -65,7 +65,7 @@ section {
 /* ================= FECHA ================= */
 
 .seccion-fecha {
-    margin-top: 20%;
+    margin-top: 25%;
 }
 
 .fecha-img {
@@ -85,7 +85,7 @@ section {
 /* ================= DRESSCODE ================= */
 
 .seccion-dresscode {
-    margin-top: 25%;
+    margin-top: 35%;
 }
 
 .dresscode-img {
@@ -107,7 +107,7 @@ section {
     margin: auto;
     display: block;
     position: relative;
-    top: 80px;
+    top: 110px;
 }
 
 /* FONDO 2 */
@@ -142,6 +142,8 @@ section {
 
 .regalo-img {
     width: 100%;
+    position: relative;
+    top: 200px;
 }
 
 .boton-invisible-regalo {
@@ -166,6 +168,8 @@ section {
 
 .asistencia-img {
     width: 100%;
+    position: relative;
+    top: 300px;
 }
 
 /* FONDO 3 */
