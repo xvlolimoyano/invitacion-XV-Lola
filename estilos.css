@@ -10,261 +10,93 @@ body {
     overflow-x: hidden; 
 }
 
-/* --- SECCIÓN PORTADA --- */
-.seccion-portada {
+/* LA CLAVE: Este contenedor mide el largo total de tu invitación */
+.invitacion-completa {
     width: 100%;
+    position: relative;
+    height: 4200px; /* Ajustamos el alto total para que entren todos tus 'top' */
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    min-height: 850px; /* Le damos altura para que la fecha no se le suba encima */
 }
 
-.titulo-container {
-    width: 100%;
-    position: relative;
-    z-index: 10;
-}
-
-.titulo-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.sticker-container {
-    width: 100%;
-    position: relative;
-    z-index: 10;
-    margin-top: -130px;
-}
-
-.sticker-img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.3));
-}
+/* PORTADA */
+.titulo-container { width: 100%; position: relative; z-index: 10; }
+.titulo-img { width: 100%; height: auto; display: block; }
+.sticker-container { width: 100%; position: relative; z-index: 10; margin-top: -130px; }
+.sticker-img { width: 100%; height: auto; filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.3)); }
 
 .fondo1-img {
     width: 100%;
     height: auto;
-    display: block;
-    position: absolute; /* Cambiado a absolute para que el fondo no empuje el resto */
-    bottom: 0;
+    position: absolute;
+    top: 300px; /* Ajustado para que se vea detrás de la portada */
     z-index: 1;
 }
 
-/* --- SECCIÓN FECHA --- */
-.seccion-fecha {
-    width: 100%;
-    position: relative;
-    min-height: 50px;
-}
-
+/* FECHA */
 .fecha-container {
     position: absolute;
-    top: 50px; /* Ajustado: ahora se mide desde el inicio de SU sección */
+    top: 870px; /* TU POSICIÓN ORIGINAL */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     z-index: 15;
-    display: flex;
-    justify-content: center;
 }
+.fecha-img { width: 100%; height: auto; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
+.boton-invisible-mapa { position: absolute; bottom: 40%; left: 38%; width: 35%; height: 40px; cursor: pointer; z-index: 20; }
 
-.fecha-img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
-}
-
-.boton-invisible-mapa {
-    position: absolute;
-    bottom: 40%;
-    left: 38%;
-    width: 35%;
-    height: 40px;
-    background-color: rgba(255, 0, 0, 0);
-    cursor: pointer;
-    z-index: 20;
-}
-
-/* --- SECCIÓN DRESSCODE --- */
-.seccion-dresscode {
-    width: 100%;
-    position: relative;
-    min-height: 600px;
-}
-
+/* DRESSCODE */
 .dresscode-container {
     position: absolute;
-    top: 0px; /* Ajustado */
+    top: 1500px; /* TU POSICIÓN ORIGINAL */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     z-index: 15;
 }
+.dresscode-img { width: 100%; height: auto; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
 
-.dresscode-img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
-}
-
-/* --- SECCIÓN PLAYLIST --- */
-.seccion-playlist {
-    width: 100%;
-    position: relative;
-    min-height: 600px;
-}
-
-.fondo2-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: absolute;
-    top: -100px;
-    z-index: -1;
-}
-
+/* PLAYLIST */
 .playlist-container {
     position: absolute;
-    top: 50px; /* Ajustado */
+    top: 2020px; /* TU POSICIÓN ORIGINAL */
     left: 50%; 
     transform: translateX(-50%);
     width: 100%;
     z-index: 15;
 }
+.playlist-img { width: 95%; height: auto; margin: 0 auto; display: block; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
+.fondo2-img { width: 100%; height: auto; position: absolute; top: 1900px; z-index: -1; }
+.boton-invisible-playlist { position: absolute; top: 2450px; left: 63%; transform: translateX(-50%); width: 23%; height: 42px; cursor: pointer; z-index: 20; }
 
-.playlist-img {
-    width: 95%;
-    height: auto;
-    margin: 0 auto; 
-    display: block;
-    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
-}
-
-.boton-invisible-playlist {
-    position: absolute;
-    bottom: 5%; /* Ajustado para que no dependa de números negativos gigantes */
-    left: 63%;
-    transform: translateX(-50%);
-    width: 23%;
-    height: 42px;
-    background-color: rgba(255, 0, 0, 0);
-    cursor: pointer;
-    z-index: 20;
-}
-
-/* --- SECCIÓN REGALO --- */
-.seccion-regalo {
-    width: 100%;
-    position: relative;
-    min-height: 450px;
-}
-
+/* REGALO */
 .regalo-container {
     position: absolute;
-    top: 20px; /* Ajustado */
+    top: 2570px; /* TU POSICIÓN ORIGINAL (aprox) */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;  
     z-index: 15;
 }
+.regalo-img { width: 100%; height: auto; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
+.boton-invisible-regalo { position: absolute; bottom: 27%; left: 50%; transform: translateX(-50%); width: 35%; height: 50px; cursor: pointer; z-index: 100; }
 
-.regalo-img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
-}
-
-.boton-invisible-regalo {
-    position: absolute;
-    bottom: 27%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 35%;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0);
-    cursor: pointer;
-    z-index: 100;
-}
-
-/* --- SECCIÓN ASISTENCIA --- */
-.seccion-asistencia {
-    width: 100%;
-    position: relative;
-    min-height: 600px;
-}
-
+/* ASISTENCIA */
 .asistencia-container {
     position: absolute;
-    top: 50px; /* Ajustado de 350px a 50px */
+    top: 3200px; /* Ajustado para que siga el orden */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;  
     z-index: 15;
 }
+.asistencia-img { width: 100%; height: auto; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
+.fondo3-img { width: 100%; height: auto; position: absolute; top: 3100px; z-index: -2; }
+.boton-invisible-asistencia { position: absolute; top: 3650px; left: 50%; transform: translateX(-50%); width: 55%; height: 33px; cursor: pointer; z-index: 20; }
 
-.asistencia-img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2));
-}
-
-.fondo3-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: absolute;
-    top: -50px;
-    z-index: -2;
-}
-
-.boton-invisible-asistencia {
-    position: absolute;
-    bottom: 17.5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 55%;
-    height: 33px;
-    background-color: rgba(255, 0, 0, 0);
-    cursor: pointer;
-    z-index: 20;
-}
-
-/* --- POPUP --- */
-.overlay-popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-contenido {
-    width: 95%;
-    position: relative;
-    text-align: center;
-}
-
-.datos-img {
-    width: 100%;
-    height: auto;
-}
-
-.boton-cerrar {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: white;
-    border: none;
-    border-radius: 20px;
-    font-family: sans-serif;
-    font-weight: bold;
-    cursor: pointer;
-}
+/* POPUP Y OTROS */
+.overlay-popup { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.7); z-index: 1000; justify-content: center; align-items: center; }
+.popup-contenido { width: 95%; max-width: 400px; position: relative; text-align: center; }
+.datos-img { width: 100%; height: auto; }
+.boton-cerrar { margin-top: 15px; padding: 10px 20px; background-color: white; border: none; border-radius: 20px; font-family: sans-serif; font-weight: bold; cursor: pointer; }
