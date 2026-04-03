@@ -52,11 +52,11 @@ section {
 
 /* STICKER */
 .sticker-container {
-    margin-top: -25%;
+    margin-top: -30%;
 }
 
 .sticker-img {
-    width: 95%;
+    width: 90%;
     display: block;
     margin: auto;
     filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.3));
@@ -111,7 +111,7 @@ section {
 /* FONDO 2 */
 .fondo2-img {
     position: absolute;
-    top: -90%;
+    top: -110%;
     left: 0;
     width: 100%;
     z-index: 2;
