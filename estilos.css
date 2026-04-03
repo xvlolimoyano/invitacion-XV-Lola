@@ -111,7 +111,7 @@ section {
 /* FONDO 2 */
 .fondo2-img {
     position: absolute;
-    top: -10%;
+    top: -90%;
     left: 0;
     width: 100%;
     z-index: 2;
