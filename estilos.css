@@ -29,7 +29,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
 }
 
 /* CONTENIDO ARRIBA */
@@ -85,7 +85,7 @@ section {
 /* ================= DRESSCODE ================= */
 
 .seccion-dresscode {
-    margin-top: 10%;
+    margin-top: 25%;
 }
 
 .dresscode-img {
@@ -95,7 +95,7 @@ section {
 /* ================= PLAYLIST ================= */
 
 .seccion-playlist {
-    margin-top: 10%;
+    margin-top: 50%;
 }
 
 .playlist-container {
