@@ -59,7 +59,7 @@ section {
 /* ================= FECHA ================= */
 
 .seccion-fecha {
-    margin-top: -10%;
+    margin-top: -25%;
 }
 
 .fecha-container {
@@ -89,7 +89,7 @@ section {
 /* ================= DRESSCODE ================= */
 
 .seccion-dresscode {
-    margin-top: 5%;
+    margin-top: 25%;
 }
 
 .dresscode-container {
@@ -107,7 +107,7 @@ section {
 /* ================= PLAYLIST ================= */
 
 .seccion-playlist {
-    margin-top: -5%; /* 👈 sube la sección para evitar espacio blanco */
+    margin-top: 60%; /* 👈 sube la sección para evitar espacio blanco */
 }
 
 .playlist-container {
@@ -147,7 +147,7 @@ section {
 /* ================= REGALO ================= */
 
 .seccion-regalo {
-    margin-top: 10%;
+    margin-top: 100%;
 }
 
 .regalo-container {
@@ -212,7 +212,7 @@ section {
 /* ================= ASISTENCIA ================= */
 
 .seccion-asistencia {
-    margin-top: 10%;
+    margin-top: 150%;
 }
 
 .asistencia-container {
