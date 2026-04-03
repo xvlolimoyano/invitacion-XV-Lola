@@ -120,7 +120,7 @@ section {
 /* FONDO 2 */
 .fondo2-img {
     position: absolute;
-    top: -50%; /* 👈 ajustá esto fino */
+    top: -65%; /* 👈 ajustá esto fino */
     left: 0;
     width: 100%;
     z-index: 1;
