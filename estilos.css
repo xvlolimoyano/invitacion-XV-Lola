@@ -95,7 +95,7 @@ section {
 /* ================= PLAYLIST ================= */
 
 .seccion-playlist {
-    margin-top: 50%;
+    margin-top: 10%;
 }
 
 .playlist-container {
@@ -106,6 +106,8 @@ section {
     width: 95%;
     margin: auto;
     display: block;
+    position: relative;
+    top: 80px;
 }
 
 /* FONDO 2 */
