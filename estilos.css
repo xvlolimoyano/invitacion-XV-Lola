@@ -147,12 +147,12 @@ section {
 .regalo-img {
     width: 100%;
     position: relative;
-    top: 180px;
+    top: 170px;
 }
 
 .boton-invisible-regalo {
     position: absolute;
-    bottom: 40%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     width: 35%;
