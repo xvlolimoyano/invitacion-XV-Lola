@@ -6,37 +6,52 @@
 
 body {
     width: 100%;
-    background-color: #d1cfc7; 
-    overflow-x: hidden; 
+    background-color: #d1cfc7;
+    overflow-x: hidden;
 }
 
-/* ESTO ES LO QUE HACE QUE TUS PÍXELES FUNCIONEN EN GITHUB */
-.contenedor-principal {
+/* ESTO ES LO QUE ARREGLA TU CÓDIGO: Un contenedor que respeta tus píxeles */
+.main-wrapper {
     width: 100%;
     position: relative;
-    height: 4000px; /* Ajustamos el largo total para que entren tus coordenadas */
+    /* Ajustamos el alto total para que entren todas tus secciones en orden */
+    height: 4500px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* PORTADA */
-.seccion-portada { width: 100%; display: flex; flex-direction: column; align-items: center; }
+.seccion-portada {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
 .titulo-container { width: 100%; position: relative; z-index: 10; }
 .titulo-img { width: 100%; height: auto; display: block; }
-.sticker-container { width: 100%; position: relative; z-index: 10; margin-top: -130px; }
+
+.sticker-container {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    margin-top: -130px;
+}
 .sticker-img { width: 100%; height: auto; filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.3)); }
 
 .fondo1-img {
     width: 100%;
     height: auto;
     display: block;
-    position: absolute;
-    top: 0px; /* Ajustado para que se vea detras del titulo */
+    position: relative;
     z-index: 1;
+    margin-top: -700px;
 }
 
-/* FECHA - TUS VALORES ORIGINALES */
+/* FECHA - TUS COORDENADAS ORIGINALES */
 .fecha-container {
     position: absolute;
-    top: 870px; 
+    top: 870px; /* TU NÚMERO */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -45,12 +60,20 @@ body {
     justify-content: center;
 }
 .fecha-img { width: 100%; height: auto; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
-.boton-invisible-mapa { position: absolute; bottom: 40%; left: 38%; width: 35%; height: 40px; cursor: pointer; z-index: 20; }
+.boton-invisible-mapa { 
+    position: absolute; 
+    bottom: 40%; 
+    left: 38%; 
+    width: 35%; 
+    height: 40px; 
+    background-color: transparent; 
+    z-index: 20; 
+}
 
-/* DRESSCODE - TUS VALORES ORIGINALES */
+/* DRESSCODE - TUS COORDENADAS ORIGINALES */
 .dresscode-container {
     position: absolute;
-    top: 1500px; 
+    top: 1500px; /* TU NÚMERO */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -58,46 +81,108 @@ body {
 }
 .dresscode-img { width: 100%; height: auto; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
 
-/* PLAYLIST - TUS VALORES ORIGINALES */
+/* PLAYLIST - TUS COORDENADAS ORIGINALES */
 .playlist-container {
     position: absolute;
-    top: 2020px; 
-    left: 50%; 
+    top: 2020px; /* TU NÚMERO */
+    left: 50%;
     transform: translateX(-50%);
     width: 100%;
     z-index: 15;
 }
 .playlist-img { width: 95%; height: auto; margin: 0 auto; display: block; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
-.fondo2-img { width: 100%; height: auto; position: absolute; top: 1900px; z-index: -1; }
-.boton-invisible-playlist { position: absolute; top: 2450px; left: 63%; transform: translateX(-50%); width: 23%; height: 42px; cursor: pointer; z-index: 20; }
 
-/* REGALO - TUS VALORES ORIGINALES */
+.fondo2-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 1850px; /* Ajustado para que quede detrás de la playlist */
+    z-index: -1;
+}
+
+.boton-invisible-playlist {
+    position: absolute;
+    top: 2450px; /* Ajustado para que caiga sobre el botón de la imagen */
+    left: 63%;
+    transform: translateX(-50%);
+    width: 23%;
+    height: 42px;
+    z-index: 20;
+}
+
+/* REGALO - TUS COORDENADAS ORIGINALES */
 .regalo-container {
     position: absolute;
-    top: 2570px; 
+    top: 2650px; /* Ajustado siguiendo tu lógica de cascada */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;  
     z-index: 15;
 }
 .regalo-img { width: 100%; height: auto; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
-.boton-invisible-regalo { position: absolute; bottom: 27%; left: 50%; transform: translateX(-50%); width: 35%; height: 50px; cursor: pointer; z-index: 100; }
+.boton-invisible-regalo {
+    position: absolute;
+    bottom: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 50px;
+    z-index: 100;
+}
 
-/* ASISTENCIA - TUS VALORES ORIGINALES */
+/* ASISTENCIA - TUS COORDENADAS ORIGINALES */
 .asistencia-container {
     position: absolute;
-    top: 3200px; 
+    top: 3300px; /* Ajustado para que siga debajo del regalo */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;  
     z-index: 15;
 }
 .asistencia-img { width: 100%; height: auto; filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.2)); }
-.fondo3-img { width: 100%; height: auto; position: absolute; top: 3100px; z-index: -2; }
-.boton-invisible-asistencia { position: absolute; top: 3650px; left: 50%; transform: translateX(-50%); width: 55%; height: 33px; cursor: pointer; z-index: 20; }
+
+.fondo3-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 3200px; /* Posicionado detrás de la asistencia */
+    z-index: -2;
+}
+
+.boton-invisible-asistencia {
+    position: absolute;
+    bottom: 17.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    height: 33px;
+    z-index: 20;
+}
 
 /* POPUP */
-.overlay-popup { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.7); z-index: 1000; justify-content: center; align-items: center; }
-.popup-contenido { width: 95%; max-width: 400px; position: relative; text-align: center; }
+.overlay-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-contenido { width: 95%; position: relative; text-align: center; }
 .datos-img { width: 100%; height: auto; }
-.boton-cerrar { margin-top: 15px; padding: 10px 20px; background-color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; }
+.boton-cerrar {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
