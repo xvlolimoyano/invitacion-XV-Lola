@@ -6,7 +6,7 @@
 
 body {
     width: 100%;
-    background-color: #7D567F;
+    background-color: #9F9EB8;
     overflow-x: hidden;
     position: relative;
 }
@@ -157,7 +157,7 @@ section {
 
 .boton-invisible-regalo {
     position: absolute;
-    bottom: -30%;
+    bottom: -40%;
     left: 50%;
     transform: translateX(-50%);
     width: 35%;
@@ -194,7 +194,7 @@ section {
 
 .boton-invisible-asistencia {
     position: absolute;
-    bottom: -9%;
+    bottom: -7%;
     left: 50%;
     transform: translateX(-50%);
     width: 55%;
